@@ -1,0 +1,368 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home & Style Mobiliario</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Barra superior de bienvenida */
+    .topbar {
+      background-color: #1e3d59;
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    header {
+      background-color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 2rem; /* deja espacio para la topbar */
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #1e3d59;
+      font-weight: 500;
+    }
+
+    /* HERO con efecto de zoom lento */
+    .hero {
+      position: relative;
+      height: 70vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("renderizado1.png");
+      background-size: 110%;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      animation: zoomIn 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes zoomIn {
+      0% {
+        background-size: 110%;
+      }
+      100% {
+        background-size: 120%;
+      }
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    .hero button {
+      background-color: #1e3d59;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      z-index: 1;
+      position: relative;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .producto {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+    }
+
+    .producto-info {
+      padding: 1rem;
+    }
+
+    .producto-info h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    .sobre {
+      text-align: center;
+    }
+.galeria-sobre {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.galeria-sobre img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+    .contacto {
+      background-color: #1e3d59;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ddd;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra superior -->
+  <div class="topbar">
+    Bienvenidos a nuestra página
+  </div>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">Home & Style Mobiliario</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#sobre">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Hero principal -->
+  <section class="hero" id="inicio">
+    <div>
+      <h1>Diseñamos tu hogar, tu estilo</h1>
+      <button onclick="document.getElementById('catalogo').scrollIntoView()">Ver Catálogo</button>
+    </div>
+  </section>
+
+  <!-- Catálogo -->
+  <section id="catalogo">
+    <h2 style="text-align:center;">Catálogo</h2>
+    <div class="catalogo">
+      <div class="producto">
+        <img src="repisa2.jpg" alt="Producto 1">
+        <div class="producto-info">
+          <h3>Repisa pared Nilo</h3>
+          <p>Repisa para pared fabricada en melamina blanca de gran durabilidad ideal para decorar su hogar.</p>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="repisa1.jpg" alt="Producto 2">
+        <div class="producto-info">
+          <h3>Repisa pared Lineal</h3>
+          <p>Repisa lineal para pared fabricada en melamina blanca de gran durabilidad ideal para decorar su hogar.</p>
+        </div>
+      </div>
+<div class="producto">
+  <img src="estanteriasantiago.jpg" alt="Producto 3">
+  <div class="producto-info">
+    <h3>Estantería Santiago</h3>
+    <p>Ideal para espacios reducidos. Diseño moderno con una gran variedad de espacios para exhibir su decoración.</p>
+  </div>
+</div>
+
+<div class="producto">
+  <img src="vestidorpaula.jpg" alt="Producto 4">
+  <div class="producto-info">
+    <h3>Vestidor Paula</h3>
+    <p>Perfecto para dormitorios, cuenta con cajoneras de cierre suave y repisas internas para aprovechar su espacio.</p>
+  </div>
+</div>
+
+<div class="producto">
+  <img src="escritoriosebastian.jpg" alt="Producto 5">
+  <div class="producto-info">
+    <h3>Escritorio Sebastian</h3>
+    <p>Escritorio compacto de melamina blanca con puertas laterales, perfecto para oficina en casa. Colores a elección.</p>
+  </div>
+  </div>
+
+<div class="producto">
+  <img src="escritorioana.jpg" alt="Producto 6">
+  <div class="producto-info">
+    <h3>Escritorio Ana</h3>
+    <p>Compacto y funcional para espacios pequeños.</p>
+    </div>
+    </div>
+<div class="producto">
+  <img src="escritoriopc.jpg" alt="Producto 7">
+  <div class="producto-info">
+    <h3>Escritorio PC</h3>
+    <p>Escritorio compacto ideal para ordenadores.</p>
+    </div>
+    </div>
+<div class="producto">
+  <img src="escritoriojairo.jpg" alt="Producto 8">
+  <div class="producto-info">
+    <h3>Escritorio Jairo</h3>
+    <p>Escritorio fabricado en melamina blanca, cuenta con dos cajoneras de cierre suave, compacto y funcional.</p>
+    </div>
+    </div>
+
+<div class="producto">
+  <img src="comodaalice.jpg" alt="Producto 9">
+  <div class="producto-info">
+    <h3>Cómoda Alice</h3>
+    <p>Diseño bajo y elegante con amplias cajoneras. Colores a elección.</p>
+  </div>
+  </div>
+
+<div class="producto">
+  <img src="mueblemicroondas.jpg" alt="Producto 10">
+  <div class="producto-info">
+    <h3>Mueble Microondas Lima</h3>
+    <p>Compacto y funcional, ideal para complementar su cocina.</p>
+    </div>
+    </div>
+<div class="producto">
+  <img src="mueblecocinalia.jpg" alt="Producto 11">
+  <div class="producto-info">
+    <h3>Mueble de cocina Lía</h3>
+    <p>Cuenta con un estilo moderno que aprovecha cada espacio en su estructura. Ideal para espacios grandes.</p>
+    </div>
+    </div>
+<div class="producto">
+  <img src="mueblemicroondasaxel.jpg" alt="Producto 12">
+  <div class="producto-info">
+    <h3>Mueble Microondas Axel</h3>
+    <p>Compacto y funcional para departamentos pequeños.</p>
+    </div>
+    </div>
+<div class="producto">
+  <img src="cineencasamateo.jpg" alt="Producto 13">
+  <div class="producto-info">
+    <h3>Cine en casa Mateo</h3>
+    <p>Equipa tu zona de entretenimiento y disfruta de momentos incontables alrededor de este mueble funcional, moderno y sofisticado.  Colores a elección.</p>
+  </div>
+  </div>
+
+<div class="producto">
+  <img src="cineencasaely.jpg" alt="Producto 14">
+  <div class="producto-info">
+    <h3>Cine en casa Ely</h3>
+    <p>Este mueble para tv está diseñado para crear un espacio de entretenimiento que disfrutarás al máximo. Ideal para ambientes pequeños o grandes que les dará un toque de distinción. </p>
+    </div>
+    </div>
+<div class="producto">
+  <img src="cineencasasanpablo.jpg" alt="Producto 15">
+  <div class="producto-info">
+    <h3>Cine en Casa San Pablo</h3>
+    <p>Combina funcionabilidad y diseño, en un aspecto muy moderno y casual. Este mueble en sus diferentes estantes te permite organizar los objetos decorativos, tus consolas y mandos de control.</p>
+    </div>
+    </div>
+<div class="producto">
+  <img src="muebletvarizona.jpg" alt="Producto 16">
+  <div class="producto-info">
+    <h3>Mueble Tv Arizona</h3>
+    <p>Compacto, funcional y elegante ideal para ambientes pequeños.</p>
+    </div>
+</div>
+
+
+  </section>
+
+  <!-- Sobre Nosotros -->
+<section class="sobre" id="sobre">
+  <h2>Sobre Nosotros</h2>
+  <p>
+    Somos una empresa dedicada al diseño, fabricación y comercialización de muebles en melamina para el hogar y espacios comerciales combinando funcionalidad, estética y economía.
+    Nos especializamos en crear espacios acogedores, prácticos y con estilo, adaptados a las necesidades de cada cliente, por eso ofrecemos productos listos para entrega inmediata y también opciones personalizadas.
+    Contamos con más de 15 años de experiencia en el sector mobiliario brindando soluciones que mejoren la calidad de vida de nuestros clientes.
+  </p>
+
+<h2>Mobiliario para locales comerciales</h2>
+
+  <!-- Galería de imágenes debajo de Sobre Nosotros -->
+  <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;">
+    <img src="diseño.jpg" alt="Imagen 1" style="width: 300px; border-radius: 8px;">
+    <img src="celulares.jpeg" alt="Imagen 2" style="width: 300px; border-radius: 8px;">
+    <img src="counter.jpg" alt="Imagen 3" style="width: 300px; border-radius: 8px;">
+  </div>
+</section>
+
+
+  <section class="contacto" id="contacto">
+  <h2>Contactos</h2>
+  <p>📞 WhatsApp: +593 986 808 433</p>
+  <p>📧 Email: homeandstyleibarra@yahoo.com</p>
+  <p>📍 Ibarra, Ecuador</p>
+  <p>📘 <a href="https://www.facebook.com/mobiliariohomeandstyle" target="_blank" style="color: white; text-decoration: underline;">
+    Facebook: Home & Style Mobiliario
+  </a></p>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Home & Style. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
