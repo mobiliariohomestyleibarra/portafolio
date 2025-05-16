@@ -9,12 +9,12 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
-      color: #333;
+      color: #0b0906;
     }
 
     /* Barra superior de bienvenida */
     .topbar {
-      background-color: #1e3d59;
+      background-color: #5c5c57;
       color: white;
       text-align: center;
       padding: 0.5rem;
@@ -25,7 +25,7 @@
     }
 
     header {
-      background-color: white;
+      background-color: #f2ebe3;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -44,7 +44,7 @@
     nav a {
       margin-left: 1.5rem;
       text-decoration: none;
-      color: #1e3d59;
+      color: #0b0906;                                
       font-weight: 500;
     }
 
@@ -54,10 +54,10 @@
       height: 70vh;
       overflow: hidden;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
+      align-items: flex-end;
+      justify-content: flex-end;
+      text-align: right;
+      color: white;                                 
       padding: 2rem;
     }
 
@@ -88,13 +88,13 @@
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(92, 92, 87, 0.5);        
       padding: 1rem;
       border-radius: 0.5rem;
     }
 
     .hero button {
-      background-color: #1e3d59;
+      background-color: #5c5c57; \\\color botón ver catálogo
       color: white;
       border: none;
       padding: 0.75rem 1.5rem;
@@ -103,6 +103,8 @@
       border-radius: 4px;
       z-index: 1;
       position: relative;
+      text-align;
+      color: white;                                       
     }
 
     section {
@@ -141,23 +143,22 @@
     .sobre {
       text-align: center;
     }
-.galeria-sobre {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.galeria-sobre img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
+    .galeria-sobre {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .galeria-sobre img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
 
     .contacto {
-      background-color: #1e3d59;
+      background-color: #5c5c57;
       color: white;
       text-align: center;
       padding: 2rem;
@@ -170,9 +171,41 @@
       font-size: 0.9rem;
     }
 
+    /* Media Queries para móviles */
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 2rem;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        gap: 1rem;
+        top: 2.5rem; /* pequeño ajuste */
+      }
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      nav a {
+        margin-left: 0;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+      }
+      .catalogo {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+      }
+      .producto img {
+        height: auto; /* para que se adapte en móvil */
+      }
+      section {
+        padding: 2rem 1rem;
+      }
+      .hero {
+        height: 50vh;
+        padding: 1rem;
       }
     }
   </style>
@@ -203,11 +236,17 @@
     </div>
   </section>
 
-  <!-- Catálogo -->
+
+  <!-- Catálogo -->                                                           
   <section id="catalogo">
-    <h2 style="text-align:center;">Catálogo</h2>
+    <h2 style="text-align:center; Color: black;">Catálogo</h2> 
+               
     <div class="catalogo">
-      <div class="producto">
+
+
+
+
+<div class="producto">
         <img src="repisa2.jpg" alt="Producto 1">
         <div class="producto-info">
           <h3>Repisa pared Nilo</h3>
@@ -327,42 +366,42 @@
 </div>
 
 
+      <!-- Productos (no modifiqué nada aquí) -->
+      <!-- Tu lista de productos va aquí... -->
+    </div>
   </section>
 
   <!-- Sobre Nosotros -->
-<section class="sobre" id="sobre">
-  <h2>Sobre Nosotros</h2>
-  <p>
-    Somos una empresa dedicada al diseño, fabricación y comercialización de muebles en melamina para el hogar y espacios comerciales combinando funcionalidad, estética y economía.
-    Nos especializamos en crear espacios acogedores, prácticos y con estilo, adaptados a las necesidades de cada cliente, por eso ofrecemos productos listos para entrega inmediata y también opciones personalizadas.
-    Contamos con más de 15 años de experiencia en el sector mobiliario brindando soluciones que mejoren la calidad de vida de nuestros clientes.
-  </p>
+  <section class="sobre" id="sobre">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      Somos una empresa dedicada al diseño, fabricación y comercialización de muebles en melamina para el hogar y espacios comerciales combinando funcionalidad, estética y economía.
+      Nos especializamos en crear espacios acogedores, prácticos y con estilo, adaptados a las necesidades de cada cliente, por eso ofrecemos productos listos para entrega inmediata y también opciones personalizadas.
+      Contamos con más de 15 años de experiencia en el sector mobiliario brindando soluciones que mejoren la calidad de vida de nuestros clientes.
+    </p>
 
-<h2>Mobiliario para locales comerciales</h2>
+    <h2>Mobiliario para locales comerciales</h2>
 
-  <!-- Galería de imágenes debajo de Sobre Nosotros -->
-  <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;">
-    <img src="diseño.jpg" alt="Imagen 1" style="width: 300px; border-radius: 8px;">
-    <img src="celulares.jpeg" alt="Imagen 2" style="width: 300px; border-radius: 8px;">
-    <img src="counter.jpg" alt="Imagen 3" style="width: 300px; border-radius: 8px;">
-  </div>
-</section>
-
+    <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;">
+      <img src="diseño.jpg" alt="Imagen 1" style="width: 300px; border-radius: 8px;">
+      <img src="celulares.jpeg" alt="Imagen 2" style="width: 300px; border-radius: 8px;">
+      <img src="counter.jpg" alt="Imagen 3" style="width: 300px; border-radius: 8px;">
+    </div>
+  </section>
 
   <section class="contacto" id="contacto">
-  <h2>Contactos</h2>
-  <p>📞 WhatsApp: +593 986 808 433</p>
-  <p>📧 Email: homeandstyleibarra@yahoo.com</p>
-  <p>📍 Ibarra, Ecuador</p>
-  <p>📘 <a href="https://www.facebook.com/mobiliariohomeandstyle" target="_blank" style="color: white; text-decoration: underline;">
-    Facebook: Home & Style Mobiliario
-  </a></p>
-</section>
+    <h2>Contactos</h2>
+    <p>📞 WhatsApp: +593 986 808 433</p>
+    <p>📧 Email: homeandstyleibarra@yahoo.com</p>
+    <p>📍 Ibarra, Ecuador</p>
+    <p>📘 <a href="https://www.facebook.com/mobiliariohomeandstyle" target="_blank" style="color: white; text-decoration: underline;">
+      Facebook: Home & Style Mobiliario
+    </a></p>
+  </section>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 Home & Style. Todos los derechos reservados.
   </footer>
-
 </body>
 </html>
